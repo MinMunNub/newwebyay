@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Computer Parts Store</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      <div class="logo">PCZone</div>
+      <div class="search-bar">
+        <input type="text" placeholder="Tìm kiếm linh kiện...">
+        <button>Tìm</button>
+      </div>
+    </div>
+    <nav class="nav-bar">
+      <a href="#">PC Build Sẵn</a>
+      <a href="#">PC Cũ</a>
+      <a href="#">Combo Giá Rẻ</a>
+      <a href="#">Linh Kiện</a>
+      <a href="#">Phụ Kiện</a>
+    </nav>
+  </header>
+
+  <main class="main-container">
+    <aside class="sidebar">
+      <h3>Phân Loại</h3>
+      <ul>
+        <li><a href="#cpu-amd">CPU AMD</a></li>
+        <li><a href="#cpu-intel">CPU Intel</a></li>
+        <li><a href="#gpu-nvidia">GPU NVIDIA</a></li>
+      </ul>
+      <div class="custom-sorter">
+        <h3>Bộ Lọc Nâng Cao</h3>
+        <label class="sort-checkbox">
+          <input type="checkbox" onchange="handleSortToggle(this)" value="bestseller">
+          🔥 Bán Chạy
+        </label>
+        <label class="sort-checkbox">
+          <input type="checkbox" onchange="handleSortToggle(this)" value="newest">
+          🆕 Mới Nhất
+        </label>
+        <label class="sort-checkbox">
+          <input type="checkbox" onchange="handleSortToggle(this)" value="discount">
+          💸 Đang Giảm Giá
+        </label>
+      </div>
+      
+      <!-- Toast area -->
+      <div id="toast"></div>
+      
+    </aside>
+    <section class="products">
+      <h2 id="cpu-amd">CPU AMD</h2>
+      <div class="product-grid">
+        <div class="card">
+          <div class="image" style="background-image: url('5800x3d.avif');">
+            <span class="sale-tag">Sale</span>
+            <span class="discount">Giảm 10%</span>
+          </div>
+          <div class="title">CPU AMD RYZEN 7 5800X3D</div>
+          <div class="price">9.000.000đ <span class="old-price">10.000.000đ</span></div>
+          <p class="note">Smember giảm thêm đến 307.000đ</p>
+          <p class="note">S-Student giảm thêm đến 600.000đ</p>
+
+          <div class="tragop">
+            <p class="note">Trả góp 0% qua thẻ tín dụng kỳ hạn 3-6 tháng</p>
+          </div>
+          <div class="rating">★★★★★</div>
+        </div>
+        <div class="card">
+          <div class="image" style="background-image: url('7800x3d.avif');">
+            <span class="sale-tag">Sale</span>
+            <span class="discount">Giảm 15%</span>
+          </div>
+          <div class="title">CPU AMD RYZEN 7 7800X3D</div>
+          <div class="price">10.675.000đ <span class="old-price">12.500.000đ</span></div>
+          <p class="note">Smember giảm thêm đến 290.000đ</p>
+          <p class="note">S-Student giảm thêm đến 600.000đ</p>
+          <div class="tragop">
+            <p class="note">Trả góp 0% qua thẻ tín dụng kỳ hạn 3-6 tháng</p>
+          </div>
+          <div class="rating">★★★★★</div>
+        </div>
+        <div class="card">
+          <div class="image" style="background-image: url('9800x3d.avif');">
+            <span class="sale-tag">Sale</span>
+            <span class="discount">Giảm 20%</span>
+          </div>
+          <div class="title">CPU AMD RYZEN 7 9800X3D</div>
+          <div class="price">12.000.000đ <span class="old-price">15.000.000đ</span></div>
+          <p class="note">Smember giảm thêm đến 150.000đ</p>
+          <p class="note">S-Student giảm thêm đến 300.000đ</p>
+          <div class="tragop">
+            <p class="note">Trả góp 0% qua thẻ tín dụng kỳ hạn 3-6 tháng</p>
+          </div>
+          <div class="rating">★★★★★</div>
+        </div>
+        <div class="card">
+          <div class="image" style="background-image: url('9900x3d.avif');">
+            <span class="sale-tag">Sale</span>
+            <span class="discount">Giảm 20%</span>
+          </div>
+          <div class="title">CPU AMD RYZEN 9 9900X3D</div>
+          <div class="price">16.000.000đ <span class="old-price">20.000.000đ</span></div>
+          <p class="note">Smember giảm thêm đến 900.000đ</p>
+          <p class="note">S-Student giảm thêm đến 1.600.000đ</p>
+          <div class="tragop">
+            <p class="note">Trả góp 0% qua thẻ tín dụng kỳ hạn 3-6 tháng</p>
+          </div>
+          <div class="rating">★★★★★</div>
+        </div>
+      </div>
+
+      <h2 id="cpu-intel">CPU Intel</h2>
+      <div class="product-grid">
+        <div class="card">
+          <div class="image" style="background-image: url('13400f.jpg');">
+            <span class="sale-tag">Sale</span>
+            <span class="discount">Giảm 9%</span>
+          </div>
+          <div class="title">CPU INTEL CORE 15 13400F</div>
+          <div class="price">7.000.000đ <span class="old-price">8.000.000đ</span></div>
+          <p class="note">Smember giảm thêm đến 450.000đ</p>
+          <p class="note">S-Student giảm thêm đến 600.000đ</p>
+          <div class="tragop">
+            <p class="note">Trả góp 0% qua thẻ tín dụng kỳ hạn 3-6 tháng</p>
+          </div>
+          <div class="rating">★★★★★</div>
+        </div>
+        <div class="card">
+          <div class="image" style="background-image: url('14600k.jpg');">
+            <span class="sale-tag">Sale</span>
+            <span class="discount">Giảm 14%</span>
+          </div>
+          <div class="title">CPU INTEL CORE I5 14600KF</div>
+          <div class="price">10.000.000đ <span class="old-price">8.800.000đ</span></div>
+          <p class="note">Smember giảm thêm đến 470.000đ</p>
+          <p class="note">S-Student giảm thêm đến 700.000đ</p>
+          <div class="tragop">
+            <p class="note">Trả góp 0% qua thẻ tín dụng kỳ hạn 3-6 tháng</p>
+          </div>
+          <div class="rating">★★★★★</div>
+        </div>
+        <div class="card">
+          <div class="image" style="background-image: url('12700k.jpg');">
+            <span class="sale-tag">Sale</span>
+            <span class="discount">Giảm 12%</span>
+          </div>
+          <div class="title">CPU INTEL CORE I7 12700K</div>
+          <div class="price">9.400.000đ <span class="old-price">11.300.000đ</span></div>
+          <p class="note">Smember giảm thêm đến 150.000đ</p>
+          <p class="note">S-Student giảm thêm đến 300.000đ</p>
+          <div class="tragop">
+            <p class="note">Trả góp 0% qua thẻ tín dụng kỳ hạn 3-6 tháng</p>
+          </div>
+          <div class="rating">★★★★★</div>
+        </div>
+      </div>
+
+      <h2 id="gpu-nvidia">GPU NVIDIA</h2>
+      <div class="product-grid">
+        <div class="card">
+          <div class="image" style="background-image: url('3060.jpg');">
+            <span class="sale-tag">Sale</span>
+            <span class="discount">Giảm 22%</span>
+          </div>
+          <div class="title">GPU MSI RTX 3060 12G</div>
+          <div class="price">13.400.000đ <span class="old-price">15.800.000đ</span></div>
+          <p class="note">Smember giảm thêm đến 550.000đ</p>
+          <p class="note">S-Student giảm thêm đến 1.100.000đ</p>
+          <div class="tragop">
+            <p class="note">Trả góp 0% qua thẻ tín dụng kỳ hạn 3-6 tháng</p>
+          </div>
+          <div class="rating">★★★★★</div>
+        </div>
+        <div class="card">
+          <div class="image" style="background-image: url('3070.jpg');">
+            <span class="sale-tag">Sale</span>
+            <span class="discount">Giảm 23%</span>
+          </div>
+          <div class="title">GPU RTX 3070 8G</div>
+          <div class="price">11.000.000đ <span class="old-price">14.000.000đ</span></div>
+          <p class="note">Smember giảm thêm đến 150.000đ</p>
+          <p class="note">S-Student giảm thêm đến 300.000đ</p>
+          <div class="tragop">
+            <p class="note">Trả góp 0% qua thẻ tín dụng kỳ hạn 3-6 tháng</p>
+          </div>
+          <div class="rating">★★★★★</div>
+        </div>
+        <div class="card">
+          <div class="image" style="background-image: url('4060.webp');">
+            <span class="sale-tag">Sale</span>
+            <span class="discount">Giảm 20%</span>
+          </div>
+          <div class="title">GPU MSI RTX 4060 16G</div>
+          <div class="price">15.000.000đ <span class="old-price">18.000.000đ</span></div>
+          <p class="note">Smember giảm thêm đến 850.000đ</p>
+          <p class="note">S-Student giảm thêm đến 1.700.000đ</p>
+          <div class="tragop">
+            <p class="note">Trả góp 0% qua thẻ tín dụng kỳ hạn 3-6 tháng</p>
+          </div>
+          <div class="rating">★★★★★</div>
+        </div>
+        <div class="card">
+          <div class="image" style="background-image: url('4080.jpg');">
+            <span class="sale-tag">Sale</span>
+            <span class="discount">Giảm 11%</span>
+          </div>
+          <div class="title">GPU EXPERT RTX 4080 SUPER</div>
+          <div class="price">35.000.000đ <span class="old-price">40.000.000đ</span></div>
+          <p class="note">Smember giảm thêm đến 1.500.000đ</p>
+          <p class="note">S-Student giảm thêm đến 3.700.000đ</p>
+          <div class="tragop">
+            <p class="note">Trả góp 0% qua thẻ tín dụng kỳ hạn 3-6 tháng</p>
+          </div>
+          <div class="rating">★★★★★</div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- At the very bottom before </body> -->
+   <script src="index.js"></script>
+
+</body>
+</html>
